@@ -1,0 +1,488 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana;
+/*removes white border around page*/
+    margin: 0px;
+}
+
+
+/*header with logo aligned in the center using text-align*/
+header {
+    background-color: #ffd500;
+    text-align: center;
+    width: 100%;
+}
+
+/*Style for navbar*/
+.navbar{
+    width: 100%;
+    background-color: #ffd500;
+    overflow: auto; /*overflow to fill div*/
+    z-index: 1;
+}
+
+
+/*min-with 500px will only work for screen larger than 500px, making the sticky attribute non existent for small screens such as phones
+which the sticky will then obnavbar could be obstuctive for the article*/
+@media screen and (min-width: 500px) {
+    .navbar {
+        width: 100%;
+        background-color: #ffd500;
+        overflow: auto; /*overflow to fill div*/
+        position: -webkit-sticky; /*for safari*/
+        position: sticky; /*makes navbar sticky for better accessibility*/
+        top: 0;
+    }
+}
+
+.navbar a {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: black;
+    float: left;
+    text-decoration: none; /*Removes the underline from hyperlinkes*/
+    font-size: 20px;
+    text-align: center;
+    background-color: #ffd500;
+    width: 25%;
+    transition: 0.3s;
+  }
+
+/*a:hover highlights what he cursor is hovering*/
+.navbar a:hover {
+    background-color: #d1b62c;
+    border-radius: 5px; 
+    text-shadow: 2px 2px rgb(255, 246, 228) ;
+}
+
+/*active "a" to highlight which site you're currently on*/
+.navbar a.active-home {
+    background-color: #d1b62c;    
+    border-top-right-radius: 5px;/*only used for left navigation bar for a seemless fit to the left side of the page*/
+    font-weight: 600;
+}
+
+.navbar a.active-about {
+    background-color: #d1b62c;    
+    border-top-left-radius: 5px;/*only used for left navigation bar for a seemless fit to the right side of the page*/
+    font-weight: 600;
+}
+
+/*active "a" to highlight which site you're currently on*/
+.navbar a.active {
+    background-color: #d1b62c;    
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/*this css code is for when the website less than 500px, where the nav menu will be displayed vertically*/
+@media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+
+/*Main article*/
+.top-image {
+    position: relative;
+}
+
+.image-text {
+    background-color: rgb(255, 255, 255);
+    padding: 3px;
+}
+
+.imgbutton {
+    position: absolute;
+    bottom: 15%;
+    border: solid;
+    color: rgb(255, 255, 255);
+    border-width: 3px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.6;
+    left: 47%;
+   
+}
+
+
+.arrow:hover {
+    border: solid;
+    border-width: 0 4px 4px 0;
+    color: gray;    
+}
+
+/*Making of the arrow icon*/
+.arrow {
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 12px;
+    margin: 4px;
+    opacity: 1;
+  }
+
+  /*This is for rotating the arrow icon*/
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+
+
+.wrapper {
+    background-color:rgb(255, 255, 255);
+    height: 100%;
+}
+
+.main-container{
+    height: 100%;
+    margin: auto;
+    line-height: 1.6;
+    justify-content: space-around;
+    padding: 5vw;
+    display: f;
+    width: 70%;
+    display: flex;
+}
+
+.mainarticle{
+     width: 40%;
+}
+
+.mainarticle2 {
+    width: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mainarticle p {
+   word-spacing: px;
+   line-height: 1.8em;
+}
+
+.top-image-accessability {
+    width: 100%;
+    height: 60em;
+    position: fixed;
+}
+
+
+.main-container-accessibilty {
+    height: 100%;
+    margin: auto;
+    padding: 0px;
+    display: flex;
+    width: 80%;
+}
+
+.mainarticle-accessibility {
+    width: 48%;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 0.7em;
+    position: relative;
+}
+
+
+
+.accessibiltyimg {
+    opacity: 1;
+    width: 100%;
+    transition: .5s ease;
+    border-radius: 5px;
+}
+
+.middle2 {
+    transition: .3s ease;
+    opacity: 0;
+    top: 20%;
+    padding: 20px;
+    position: absolute;
+    height: auto;
+}
+
+.middletext {
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1vw;
+}
+
+.mainarticle-accessibility:hover .accessibiltyimg {
+    opacity: 0.7;
+}
+
+.mainarticle-accessibility:hover .middle2 {
+    opacity: 1;
+}
+
+
+.header-container-accessibilty {
+    padding: 80px;
+}
+.accessibility-header {
+    text-align: center;
+    border: solid rgb(103, 103, 103);
+    background-color:rgb(141, 141, 141,0.7);
+    border-radius: 5px;
+    padding: 50px;
+}
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .middletext{
+        background-color: gray;
+        color: white;
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 2.3vw;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .middle2 {
+        transition: .3s ease;
+        opacity: 0;
+        top: 5%;
+        padding: 20px;
+        position: absolute;
+        height: auto;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .main-container-accessibilty{
+        display: block;
+        width: 80%;    
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainarticle-accessibility{
+        width: 100%;    
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .main-container{
+        display: block;
+        width: 80%;    
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainarticle{
+        width: 100%;    
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainarticle2 {
+        width: 80%;    
+    }
+}
+
+
+
+
+
+
+
+/*top*/
+
+
+/*images*/
+
+
+
+#p32 {
+    width: 100%;
+/*we found out that display: flex could be used to make seamless fit for the space between divs*/
+    display: flex;
+    height: 50vw;
+}
+
+#wall {
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+#p35 {
+   width: 100%;
+   display: flex;
+}
+
+#tech {
+    width: 100%;
+    max-height: 100px;
+}
+
+#p32-close {
+    width: 100%;
+    height: 50vw;
+}
+#map {
+    width: 100%;
+    height: 50vw;
+}
+
+#inside {
+    width: 100%;
+    display: flex;
+}
+#tech {
+    width: 100%;
+    max-height: 370px;
+}
+
+#head-img-topical {
+    width: 100%;
+    height: 50vw;
+}
+
+#accessibility_background {
+    width: 100%;
+    max-height: 80%;
+}
+
+/**/
+/*footer*/
+.outer-footer{
+    background-color:#ffd500;
+    height: 100%;
+    position: relative;
+}
+
+.footer-container {
+    background-color: #ffd500;
+    display: flex;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    justify-content: space-around;
+    padding: 20px; 
+   
+}
+/*Footer will be displayed vertically instead of horizontally if screens are smaller than 800px*/
+@media only screen and (max-width: 800px) {
+    .footer-container{
+        display: block;
+      
+    }
+}
+
+.footer-container h1{
+    font-size: 1.6em;
+}
+
+
+.colum {
+   padding: 5px;
+}
+
+/*Topical page*/
+
+
+
+
+/*about oslomet*/
+.secondimage {
+    position: relative;
+}
+
+
+.mainarticle2-about {
+    display: block;
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.mainarticle2-about img {
+    object-fit: cover;
+   width: 100%;
+   max-height: 350px;
+   min-height: 350px;
+   border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .main-container{
+        display: block;
+        width: 80%;    
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .mainarticle2-about {
+        width: 80%;    
+    }
+}
+
+
+/*
+.mainarticle2-about img{
+    object-fit: cover;
+    min-width: 400px;
+    min-height: 300px;
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 5px;
+}
+*/
+
+
+
+/*<div class="wrapper">
+    <div class="main-container">
+        <div id = "imgcontainer1">
+            <img src="../img/society.jpg" alt="Society"  id = "society-img">
+                <div class = "middleimg">
+                    <div id = "societytext">Society</div>
+                </div>
+        </div>
+        <div id = "imgcontainer2">
+            <img src="../img/technology.jpg" alt="Technology" id = "tech-img">
+                <div class = "middleimg">
+                    <div id = "techtext">Technology</div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+/*Ha med justerbar skrift for de med dårlig syn
+  Ha med eller skjekk med lyd iforhold til de med disleksy
+  Ha med beskrivende kommentarer
+  Ha med attributter som <nav> og <alt>
+  Ha med forfattern
+  På homepage ta med knapp som dytter deg ned fra bilde*/
+
+  
